@@ -25,10 +25,17 @@ async function sendMessage() {
     chatContainer.appendChild(aiDiv);
 
     try {
+        const prompt = `
+Format your answer in proper markdown.
+Use headings, bullet points, and paragraphs.
+
+Question:
+${message}
+`;
 
         const url =
             "https://text.pollinations.ai/" +
-            encodeURIComponent(message);
+            encodeURIComponent(prompt);
 
         const response = await fetch(url);
 
