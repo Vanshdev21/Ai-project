@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI Studio</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <h1>AI Studio</h1>
+
+  <section class="chat-section">
+    <div class="chat-container" id="chatContainer">
+      <div class="message ai">
+        Hello! Ask me anything.
+      </div>
+    </div>
+
+    <div class="chat-input">
+      <input
+        type="text"
+        id="chatPrompt"
+        placeholder="Ask anything..."
+      >
+      <button id="sendBtn">Send</button>
+    </div>
+  </section>
+
+  <section class="image-section">
+    <h2>Generate Images</h2>
+
+    <div class="image-input">
+      <input
+        type="text"
+        id="imagePrompt"
+        placeholder="Describe your image..."
+      >
+      <button id="createBtn">Create</button>
+    </div>
+
+    <div class="image-grid" id="imageGrid"></div>
+  </section>
+
+  <script src="script.js"></script>
+
+</body>
+</html>
