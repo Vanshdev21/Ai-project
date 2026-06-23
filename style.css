@@ -85,3 +85,19 @@ button{
     width:100%;
     border-radius:15px;
 }
+
+.image-card{
+    display:flex;
+    flex-direction:column;
+    gap:10px;
+}
+
+.image-card button{
+    padding:10px;
+    border:none;
+    border-radius:10px;
+    cursor:pointer;
+    background:#2563eb;
+    color:white;
+    font-weight:600;
+}

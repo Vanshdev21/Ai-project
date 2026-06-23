@@ -90,3 +90,44 @@ imagePrompt.addEventListener("keydown", (e) => {
         generateImage();
     }
 });
+
+function generateImage() {
+
+    const prompt = imagePrompt.value.trim();
+
+    if (!prompt) return;
+
+    const card = document.createElement("div");
+    card.classList.add("image-card");
+
+    const img = document.createElement("img");
+
+    const imageUrl =
+        "https://image.pollinations.ai/prompt/" +
+        encodeURIComponent(prompt);
+
+    img.src = imageUrl;
+
+    const saveBtn = document.createElement("button");
+    saveBtn.textContent = "Save Image";
+
+    saveBtn.addEventListener("click", () => {
+
+        const link = document.createElement("a");
+
+        link.href = imageUrl;
+        link.download = "ai-image.jpg";
+
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+
+    });
+
+    card.appendChild(img);
+    card.appendChild(saveBtn);
+
+    imageGrid.prepend(card);
+
+    imagePrompt.value = "";
+}
